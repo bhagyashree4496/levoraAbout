@@ -1,10 +1,11 @@
 import React from "react";
-import img1 from "../imagges/1@1.5x.jpg";
-import img2 from "../imagges/2@1.5x.png";
-import img3 from "../imagges/3@1.5x.png";
+
+import img2 from "../../imagges/2@1.5x.png";
+import img3 from "../../imagges/3@1.5x.png";
 //import { motion } from "framer-motion";
 
 import { useAnimation, motion } from "framer-motion";
+import Bgparallax from "./Bgparallax";
 
 const Variants = {
   visible: { scale: 1 },
@@ -14,14 +15,7 @@ const Variants = {
 export default function Submit() {
   return (
     <div className="relative w-[100vw] h-[100vh] flex justify-center items-center">
-      <motion.img
-        src={img1}
-        className="absolute top-0 left-0 w-[100vw] h-[100vh] "
-        variants={Variants}
-        initial="hidden"
-        animate="visible"
-        transition={{ duration: 4, repeat: Infinity, repeatType: "reverse" }}
-      ></motion.img>
+      <Bgparallax></Bgparallax>
       <img
         src={img2}
         className="absolute top-0 left-0 w-[100vw] h-[100vh]"

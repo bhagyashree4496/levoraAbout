@@ -10,7 +10,7 @@ import HeroContent from "./components/HeroContent";
 import MainFeatures from "./components/MainFeatures";
 import PageTransition from "./components/PageTransition";
 import Nft from "./components/nft/Nft";
-import Submit from "./components/Submit";
+import Submit from "./components/submit/Submit";
 
 const Hero = () => {
   let ref = useRef(null);
@@ -21,7 +21,7 @@ const Hero = () => {
   let y = useTransform(scrollYProgress, [0, 1], ["0%", "40%"]);
 
   return (
-    <div className="bg-[#1f0442] ">
+    <div className="bg-[#1f0442] w-[100vw]  ">
       <div
         className="text-white relative w-full h-screen bg-[#1f0442] "
         ref={ref}
@@ -67,9 +67,9 @@ const Hero = () => {
         {/* <div className="bg-[#1a0533] w-full h-full -z-10 fixed top-0 "></div> */}
       </div>
       <MainFeatures></MainFeatures>
+
       <Nft></Nft>
       <Submit></Submit>
-
       <PageTransition></PageTransition>
     </div>
   );

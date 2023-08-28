@@ -11,6 +11,7 @@ import {
   Link,
 } from "react-router-dom";
 import Navbar from "./components/Navbar";
+import Try from "./Try";
 
 export default function App() {
   const location = useLocation();
@@ -30,6 +31,7 @@ export default function App() {
           <Route path="/about" element={<Hero />} />
         </Routes>
       </AnimatePresence>
+      {/* <Try></Try> */}
     </>
   );
 }
