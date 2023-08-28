@@ -10,6 +10,7 @@ import {
   useLocation,
   Link,
 } from "react-router-dom";
+import Navbar from "./components/Navbar";
 
 export default function App() {
   const location = useLocation();
@@ -17,7 +18,15 @@ export default function App() {
     <>
       <AnimatePresence mode="wait">
         <Routes location={location} key={location.pathname}>
-          <Route path="/" element={<Link to="/about">about</Link>} />
+          <Route
+            path="/"
+            element={
+              <div className="bg-[#1f0442] flex items-center justify-center  w-screen h-screen text-white">
+                <Navbar></Navbar>
+                <h1 className="text-4xl">Home page</h1>
+              </div>
+            }
+          />
           <Route path="/about" element={<Hero />} />
         </Routes>
       </AnimatePresence>

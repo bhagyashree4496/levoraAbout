@@ -2,13 +2,34 @@ import React from "react";
 import img1 from "../imagges/1@1.5x.jpg";
 import img2 from "../imagges/2@1.5x.png";
 import img3 from "../imagges/3@1.5x.png";
-import { motion } from "framer-motion";
+//import { motion } from "framer-motion";
+
+import { useAnimation, motion } from "framer-motion";
+
+const Variants = {
+  visible: { scale: 1 },
+  hidden: { scale: 1.1 },
+};
+
 export default function Submit() {
   return (
-    <div className="relative w-screen h-screen flex justify-center items-center">
-      <motion.img src={img1} className="absolute top-0 left-0"></motion.img>
-      <img src={img2} className="absolute top-0 left-0"></img>
-      <img src={img3} className="absolute top-0 left-0"></img>
+    <div className="relative w-[100vw] h-[100vh] flex justify-center items-center">
+      <motion.img
+        src={img1}
+        className="absolute top-0 left-0 w-[100vw] h-[100vh] "
+        variants={Variants}
+        initial="hidden"
+        animate="visible"
+        transition={{ duration: 4, repeat: Infinity, repeatType: "reverse" }}
+      ></motion.img>
+      <img
+        src={img2}
+        className="absolute top-0 left-0 w-[100vw] h-[100vh]"
+      ></img>
+      <img
+        src={img3}
+        className="absolute top-0 left-0 w-[100vw] h-[100vh]"
+      ></img>
       <div className="absolute top-[50%] left-[50%] -translate-x-[50%] -translate-y-[50%] max-w-4xl ">
         {" "}
         <h1 className="font-bold text-center text-[5vw] leading-[110%] text-[#fcc17c]">

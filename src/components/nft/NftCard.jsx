@@ -12,12 +12,12 @@ export default function NftCard({
 }) {
   return (
     <div className="bg-gradient-to-r from-[#4e1263b3] to-[#361263b3] rounded-[40px]   px-20 pb-5">
-      <div className="flex justify-between items-center">
+      <div className={`flex ${direction} justify-between items-center`}>
         {" "}
         <div className="flex flex-col justify-center items-center">
           <div className="relative">
             <motion.img
-              animate={{ y: 30 }}
+              animate={{ y: 25 }}
               transition={{
                 ease: "linear",
                 duration: 4,
@@ -52,7 +52,7 @@ export default function NftCard({
           </Reveal>
 
           <Reveal>
-            <p className="font-medium text-[25px] text-white leading-[1.80]">
+            <p className="font-medium text-[14px] text-white leading-[1.80]">
               {discripption}
             </p>
           </Reveal>

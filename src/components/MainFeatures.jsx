@@ -51,11 +51,11 @@ export default function MainFeatures() {
         <div className="flex items-start justify-center gap-[100px] px-40 bg-[#1f0442] mt-[400px] w-full ">
           {features.map((feature) => {
             return (
-              <div className="flex flex-col justify-center items-center gap-8 max-w-[250px]">
+              <div className="flex flex-col  justify-center items-center gap-8 max-w-[250px]">
                 <div className=" featuresimages">
                   <img src={feature.image} className="w-16 "></img>
                 </div>
-                <span>line</span>
+                <span className="w-[100px] h-[4px] bg-[#2c134db1] my-5"></span>
                 <h3 className="text-[#fcc17c] text-[30px] font-bold leading-[1.07] text-center ">
                   {feature.title}
                 </h3>

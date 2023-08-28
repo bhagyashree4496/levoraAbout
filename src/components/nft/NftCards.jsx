@@ -17,7 +17,7 @@ export default function NftCards() {
         "Buy NFT meteorites, crack them and get dragon eggs to raise your own dragon or get powerful dust to craft weapons, food, utilities.",
       bgimage: nft1bg,
       image: nft1,
-      direction: "",
+      direction: "flex-row",
     },
     {
       title: "Egg",
@@ -25,7 +25,7 @@ export default function NftCards() {
         "A baby dragon hatches from the egg, but it takes time for it to happen. You have to protect and take care of the egg.",
       bgimage: nft2bg,
       image: nft2,
-      direction: "",
+      direction: "flex-row-reverse",
     },
     {
       title: "Meteorite Dust",
@@ -33,7 +33,7 @@ export default function NftCards() {
         "Meteorite dust is a unique and valuable element. You can use it to make various game elements, such as weapons, food, etc.",
       bgimage: nft3bg,
       image: nft3,
-      direction: "",
+      direction: "flex-row",
     },
     {
       title: "Baby dragon",
@@ -41,7 +41,7 @@ export default function NftCards() {
         "The dragon cub is a cute and strong creature, which characteristics it will acquire will depends on you.",
       bgimage: nft4bg,
       image: nft4,
-      direction: "",
+      direction: "flex-row-reverse",
     },
   ];
 
@@ -54,6 +54,7 @@ export default function NftCards() {
             discripption={nft.disciption}
             image={nft.image}
             bgimage={nft.bgimage}
+            direction={nft.direction}
           ></NftCard>
         );
       })}
