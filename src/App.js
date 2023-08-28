@@ -1,17 +1,13 @@
-import React from "react";
-import { motion, AnimatePresence } from "framer-motion";
+import { AnimatePresence } from "framer-motion";
 import Hero from "./Hero";
-import topImage from "./bg.jpg";
-import bottomImage from "./3.webp";
+
 import {
   BrowserRouter as Router,
   Routes,
   Route,
   useLocation,
-  Link,
 } from "react-router-dom";
 import Navbar from "./components/Navbar";
-import Try from "./Try";
 
 export default function App() {
   const location = useLocation();
@@ -31,7 +27,6 @@ export default function App() {
           <Route path="/about" element={<Hero />} />
         </Routes>
       </AnimatePresence>
-      {/* <Try></Try> */}
     </>
   );
 }

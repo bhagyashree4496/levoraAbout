@@ -52,7 +52,7 @@ export default function NftCard({
           </Reveal>
 
           <Reveal>
-            <p className="font-medium text-[14px] text-white leading-[1.80]">
+            <p className="font-medium text-[25px] text-white leading-[1.80]">
               {discripption}
             </p>
           </Reveal>

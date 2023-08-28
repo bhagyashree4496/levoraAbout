@@ -1,5 +1,5 @@
 import React from "react";
-import Reveal from "./Reveal";
+import "../index.css";
 import trade from "../imagges/1.svg";
 import craft from "../imagges/2.svg";
 import upagrade from "../imagges/3.svg";
@@ -56,6 +56,9 @@ export default function MainFeatures() {
                   <img src={feature.image} className="w-16 "></img>
                 </div>
                 <span className="w-[100px] h-[4px] bg-[#2c134db1] my-5"></span>
+
+                {/* <span className=" w-[5px] h-[20px]  mt-5  border-[#2c134db1]  border-4 rounded-md  "></span> */}
+
                 <h3 className="text-[#fcc17c] text-[30px] font-bold leading-[1.07] text-center ">
                   {feature.title}
                 </h3>

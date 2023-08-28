@@ -1,0 +1,32 @@
+/* ScrollableContent.css */
+.scrollable-container {
+  position: relative;
+  overflow: hidden;
+}
+
+.scrollable-content {
+  width: 100%;
+  overflow-y: scroll;
+  padding-right: 17px; /* Width of the scrollbar to prevent content shift */
+  height: 100vh; /* Adjust the height as needed */
+}
+
+.scrollable-content::-webkit-scrollbar {
+  display: none; /* Hide the default scrollbar */
+}
+
+.scrollable-container.scrolling::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  right: 0;
+  height: 5px;
+  width: 30px;
+  background-color: rgba(164, 6, 6, 0.5); /* Color of the scrollbar */
+  opacity: 0; /* Initially hidden */
+  transition: opacity 0.5s;
+}
+
+.scrollable-container.scrolling:hover::before {
+  opacity: 1; /* Show the scrollbar on hover or when scrolling */
+}

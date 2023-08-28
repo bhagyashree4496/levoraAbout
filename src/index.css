@@ -23,4 +23,43 @@
   background-color: #2c134db1;
   transform: rotate(45deg);
 }
+body {
+  overflow-x: hidden;
+}
+/* .app {
+  overflow-x: hidden;
+} */
 /* #2c134d */
+/* width */
+body::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Track */
+body::-webkit-scrollbar-track {
+  background: #1f0442;
+  width: 0;
+}
+
+/* Handle */
+body::-webkit-scrollbar-thumb {
+  background: #fff;
+  border-radius: 25px;
+}
+
+/* Handle on hover */
+/* ::-webkit-scrollbar-thumb:hover {
+  background: #555;
+} */
+
+.mainfeatureline::after {
+  content: "";
+  height: 4px;
+  width: 50px;
+  position: absolute;
+  top: 0px;
+  /* right: 35px; */
+  left: 0px;
+  background-color: #2c134db1;
+  transform: rotate(-45deg);
+}
